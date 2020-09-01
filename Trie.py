@@ -10,3 +10,4 @@ class Trie:
         self.root = TrieNode()
     
     def add(self, s):
+	TrieNode()
