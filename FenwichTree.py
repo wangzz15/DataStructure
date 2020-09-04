@@ -25,3 +25,6 @@ class FenwichTree:
             res += self.BIT_arr[i]
             i -= (i & (-i))
         return res
+
+    def intervalSum(self, i, j):
+        return self.prefix(j) - self.prefix(i - 1)
