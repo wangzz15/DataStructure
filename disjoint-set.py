@@ -5,14 +5,16 @@ class DisjointSetNode:
         self.rank = 0
 
 class DisjointSet:
-    self.__init__(self, n):
+    def __init__(self, n):
         self.nodeList = []
+        self.nodeNum = n
         for i in range(n):
             self.nodeList.append(DisjointSetNode(i))
 
     def Union(self, x, y):
         if not self.inSameSet(x, y):
             self.Link(self.FindSet(self.nodeList[x]), self.FindSet(self.nodeList[y]))
+            self.nodeNum -= 1
 
     def Link(self, x, y):
         if x.rank > y.rank:
